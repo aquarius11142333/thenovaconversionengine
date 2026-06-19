@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="750" viewBox="0 0 600 750">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0%" stop-color="#0F172A"/><stop offset="100%" stop-color="#22D3EE" stop-opacity="0.35"/>
+</linearGradient></defs>
+<rect width="600" height="750" fill="url(#g)"/>
+<text x="300.0" y="375.0" font-family="sans-serif" font-size="28" fill="#F8FAFC" text-anchor="middle" opacity="0.85">Northbound Hero</text>
+</svg>
