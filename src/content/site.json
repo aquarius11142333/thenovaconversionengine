@@ -1,70 +1,70 @@
 {
-"  ""brandName"": ""The Nova Conversion Engine"","
-"  ""representative"": ""Nova Blake"","
+  "brandName": "The Nova Conversion Engine",
+  "representative": "Nova Blake",
 
-"  ""vsl"": {"
-"    ""video"": {"
-"      ""src"": ""/uploads/videos/vsl.mp4"","
-"      ""poster"": ""/uploads/images/vsl-poster.svg"""
-"    },"
-"    ""oneLiner"": ""I help product and service-based businesses increase revenue and customer conversions using my The Nova Conversion Engine."","
-"    ""bookCallCta"": {"
-"      ""label"": ""Book a Call"","
-"      ""calendlyUrl"": ""https://calendly.com/novablakeai-official/30min"""
+  "vsl": {
+    "video": {
+      "src": "/uploads/videos/vsl.mp4",
+      "poster": "/uploads/images/vsl-poster.svg"
+    },
+    "oneLiner": "I help product and service-based businesses increase revenue and customer conversions using my The Nova Conversion Engine.",
+    "bookCallCta": {
+      "label": "Book a Call",
+      "calendlyUrl": "https://calendly.com/novablakeai-official/30min"
     }
-"  },"
+  },
 
-"  ""portfolioCategories"": [""All"", ""Video Ads"", ""AI UGC Videos""],"
+  "portfolioCategories": ["All", "Video Ads", "AI UGC Videos"],
 
-"  ""portfolio"": ["
+  "portfolio": [
     {
-"      ""id"": ""proj-001"","
-"      ""title"": ""Glow Serum Launch"","
-"      ""category"": ""AI UGC Videos"","
-"      ""featured"": true,"
-"      ""media"": {"
-"        ""type"": ""video"","
-"        ""src"": ""/uploads/videos/glow-serum-launch.mp4"","
-"        ""thumbnail"": ""/uploads/images/glow-serum-thumb.svg"""
+      "id": "proj-001",
+      "title": "Glow Serum Launch",
+      "category": "AI UGC Videos",
+      "featured": true,
+      "media": {
+        "type": "video",
+        "src": "/uploads/videos/glow-serum-launch.mp4",
+        "thumbnail": "/uploads/images/glow-serum-thumb.svg"
       }
-"    },"
+    },
     {
-"      ""id"": ""proj-002"","
-"      ""title"": ""Summer Drop Ad"","
-"      ""category"": ""Video Ads"","
-"      ""featured"": true,"
-"      ""media"": {"
-"        ""type"": ""video"","
-"        ""src"": ""/uploads/videos/summer-drop.mp4"","
-"        ""thumbnail"": ""/uploads/images/summer-drop-thumb.svg"""
+      "id": "proj-002",
+      "title": "Summer Drop Ad",
+      "category": "Video Ads",
+      "featured": true,
+      "media": {
+        "type": "video",
+        "src": "/uploads/videos/summer-drop.mp4",
+        "thumbnail": "/uploads/images/summer-drop-thumb.svg"
       }
-"    },"
+    },
     {
-"      ""id"": ""proj-003"","
-"      ""title"": ""Hero Product Ad"","
-"      ""category"": ""Video Ads"","
-"      ""featured"": false,"
-"      ""media"": {"
-"        ""type"": ""video"","
-"        ""src"": ""/uploads/videos/hero-product-ad.mp4"","
-"        ""thumbnail"": ""/uploads/images/northbound-hero.svg"""
+      "id": "proj-003",
+      "title": "Hero Product Ad",
+      "category": "Video Ads",
+      "featured": false,
+      "media": {
+        "type": "video",
+        "src": "/uploads/videos/hero-product-ad.mp4",
+        "thumbnail": "/uploads/images/northbound-hero.svg"
       }
-"    },"
+    },
     {
-"      ""id"": ""proj-004"","
-"      ""title"": ""UGC Testimonial Style Ad"","
-"      ""category"": ""AI UGC Videos"","
-"      ""featured"": false,"
-"      ""media"": {"
-"        ""type"": ""video"","
-"        ""src"": ""/uploads/videos/ugc-testimonial-ad.mp4"","
-"        ""thumbnail"": ""/uploads/images/aurelle-social.svg"""
+      "id": "proj-004",
+      "title": "UGC Testimonial Style Ad",
+      "category": "AI UGC Videos",
+      "featured": false,
+      "media": {
+        "type": "video",
+        "src": "/uploads/videos/ugc-testimonial-ad.mp4",
+        "thumbnail": "/uploads/images/aurelle-social.svg"
       }
     }
-"  ],"
+  ],
 
-"  ""contact"": {"
-"    ""email"": ""novablakeai.official@gmail.com"","
-"    ""calendlyUrl"": ""https://calendly.com/novablakeai/discovery-call"""
+  "contact": {
+    "email": "novablakeai.official@gmail.com",
+    "calendlyUrl": "https://calendly.com/novablakeai/discovery-call"
   }
 }
