@@ -1,12 +1,11 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { site } from "@/lib/content";
 
 export default function Portfolio() {
   const [active, setActive] = useState<string>("All");
-
-  const categories = ["All", ...site.portfolioCategories];
+  const videoRefs = useRef<Record<string, HTMLVideoElement | null>>({});
 
   const items = useMemo(() => {
     const list =
@@ -16,20 +15,25 @@ export default function Portfolio() {
     return [...list].sort((a, b) => Number(b.featured) - Number(a.featured));
   }, [active]);
 
-  return (
-    <section id="portfolio" className="mx-auto max-w-7xl px-6 py-24 lg:px-8">
-      <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-        <div className="max-w-xl">
-          <span className="text-xs font-medium uppercase tracking-wider text-cyan">
-            Portfolio
-          </span>
-          <h2 className="text-balance mt-3 font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
-            Work that converted attention into sales
-          </h2>
-        </div>
+  function togglePlay(id: string) {
+    const el = videoRefs.current[id];
+    if (!el) return;
+    if (el.paused) {
+      el.play();
+    } else {
+      el.pause();
+    }
+  }
 
-        <div className="flex flex-wrap gap-2">
-          {categories.map((cat) => (
+  return (
+    <section id="portfolio" className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
+      <div className="flex flex-col items-center gap-6 text-center">
+        <h2 className="font-display text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
+          Portfolio
+        </h2>
+
+        <div className="flex flex-wrap justify-center gap-2">
+          {site.portfolioCategories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActive(cat)}
@@ -45,67 +49,60 @@ export default function Portfolio() {
         </div>
       </div>
 
-      <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
         {items.map((project) => (
-          <article
+          <button
             key={project.id}
-            className="group relative overflow-hidden rounded-2xl border border-white/10 bg-graphite"
+            onClick={() => togglePlay(project.id)}
+            className="group relative aspect-[9/16] w-full overflow-hidden rounded-2xl border border-white/10 bg-graphite text-left"
+            aria-label={`Play ${project.title}`}
           >
-            <div className="relative aspect-[4/5] w-full overflow-hidden">
-              {project.media.type === "video" ? (
-                <video
-                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                  src={project.media.src}
-                  poster={project.media.thumbnail}
-                  muted
-                  loop
-                  playsInline
-                  onMouseEnter={(e) => e.currentTarget.play()}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.pause();
-                    e.currentTarget.currentTime = 0;
-                  }}
-                />
-              ) : (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  src={project.media.src}
-                  alt={project.title}
-                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                />
-              )}
-              <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/20 to-transparent opacity-80" />
+            {project.media.type === "video" ? (
+              <video
+                ref={(el) => {
+                  videoRefs.current[project.id] = el;
+                }}
+                className="h-full w-full object-cover"
+                src={project.media.src}
+                poster={project.media.thumbnail}
+                muted
+                loop
+                playsInline
+                preload="metadata"
+              />
+            ) : (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={project.media.src}
+                alt={project.title}
+                className="h-full w-full object-cover"
+              />
+            )}
 
-              {project.featured && (
-                <span className="absolute left-4 top-4 rounded-full bg-cyan px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-navy">
-                  Featured
-                </span>
-              )}
+            <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/10 to-transparent" />
 
-              <div className="absolute inset-x-0 bottom-0 p-5">
-                <span className="text-[11px] font-medium uppercase tracking-wider text-cyan">
-                  {project.category}
-                </span>
-                <h3 className="mt-1.5 font-display text-lg font-semibold text-ink">
-                  {project.title}
-                </h3>
-                <p className="mt-1.5 line-clamp-2 text-sm text-white/65">
-                  {project.description}
-                </p>
-                <div className="mt-3 flex items-center gap-2 text-xs text-white/45">
-                  <span>{project.client}</span>
-                  <span aria-hidden>·</span>
-                  <span>{project.industry}</span>
-                </div>
-              </div>
-            </div>
-          </article>
+            {project.featured && (
+              <span className="absolute left-3 top-3 rounded-full bg-cyan px-2.5 py-1 text-[9px] font-semibold uppercase tracking-wider text-navy">
+                Featured
+              </span>
+            )}
+
+            <span className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full bg-navy/70 text-ink backdrop-blur transition group-hover:bg-cyan group-hover:text-navy">
+              <svg width="14" height="14" viewBox="0 0 18 18" fill="currentColor">
+                <path d="M5 3.5v11l10-5.5-10-5.5Z" />
+              </svg>
+            </span>
+
+            <span className="absolute inset-x-0 bottom-0 p-3 text-xs font-medium text-ink">
+              {project.title}
+            </span>
+          </button>
         ))}
       </div>
 
       {items.length === 0 && (
         <p className="mt-12 text-center text-sm text-white/50">
-          No projects in this category yet — add one to{" "}
+          No ads in this category yet — add one to{" "}
           <code className="rounded bg-white/5 px-1.5 py-0.5">src/content/site.json</code>.
         </p>
       )}

@@ -1,99 +1,25 @@
 {
   "brandName": "The Nova Conversion Engine",
   "representative": "Nova Blake",
-  "tagline": "AI Video Ads \u00b7 AI UGC Content \u00b7 Creative Production",
-  "nav": [
-    {
-      "label": "Services",
-      "href": "#services"
+
+  "vsl": {
+    "video": {
+      "src": "/uploads/videos/vsl.mp4",
+      "poster": "/uploads/images/vsl-poster.svg"
     },
-    {
-      "label": "Portfolio",
-      "href": "#portfolio"
-    },
-    {
-      "label": "Brands",
-      "href": "#brands"
-    },
-    {
-      "label": "Process",
-      "href": "#process"
-    },
-    {
-      "label": "About",
-      "href": "#about"
-    },
-    {
-      "label": "Contact",
-      "href": "#contact"
+    "oneLiner": "I create AI Video Ads & AI UGC Content for Ecommerce, DTC, Beauty, and Skincare Brands.",
+    "bookCallCta": {
+      "label": "Book a Call",
+      "calendlyUrl": "https://calendly.com/novablakeai/discovery-call"
     }
-  ],
-  "hero": {
-    "eyebrow": "AI Creative Studio for Ecommerce",
-    "headline": "AI-Powered Video Ads That Turn Attention Into Revenue",
-    "subheadline": "The Nova Conversion Engine creates AI Video Ads, AI UGC Content, and Creative Campaigns for Shopify, DTC, Ecommerce, Beauty, and Skincare Brands.",
-    "primaryCta": {
-      "label": "Book a Discovery Call",
-      "href": "#contact"
-    },
-    "secondaryCta": {
-      "label": "View Portfolio",
-      "href": "#portfolio"
-    },
-    "featuredVideo": {
-      "type": "video",
-      "src": "/uploads/videos/hero-reel.mp4",
-      "poster": "/uploads/images/hero-poster.svg",
-      "caption": "Featured reel \u2014 swap this anytime"
-    },
-    "stats": [
-      {
-        "label": "Ads Produced",
-        "value": "250+"
-      },
-      {
-        "label": "Avg. ROAS Lift",
-        "value": "3.4x"
-      },
-      {
-        "label": "Client Brands",
-        "value": "40+"
-      }
-    ]
   },
-  "services": [
-    {
-      "id": "ai-video-ads",
-      "title": "AI Video Ads",
-      "description": "Performance-focused short-form video ads for TikTok, Meta, Instagram Reels, and YouTube Shorts.",
-      "icon": "play"
-    },
-    {
-      "id": "ai-ugc-content",
-      "title": "AI UGC Content",
-      "description": "AI-powered spokesperson videos and user-generated style creatives designed to increase trust and conversions.",
-      "icon": "spark"
-    },
-    {
-      "id": "creative-production",
-      "title": "Creative Production",
-      "description": "Full creative asset production including ads, product visuals, and campaign content.",
-      "icon": "layers"
-    }
-  ],
-  "portfolioCategories": [
-    "Video Ads",
-    "AI UGC Videos",
-    "Product Campaigns",
-    "Social Content"
-  ],
+
+  "portfolioCategories": ["All", "Video Ads", "AI UGC Videos"],
+
   "portfolio": [
     {
       "id": "proj-001",
-      "title": "Glow Serum Launch Reel",
-      "description": "AI-generated UGC spokesperson video built to launch a new skincare serum on TikTok.",
-      "client": "Luminate Skincare",
-      "industry": "Beauty & Skincare",
+      "title": "Glow Serum Launch",
       "category": "AI UGC Videos",
       "featured": true,
       "media": {
@@ -104,10 +30,7 @@
     },
     {
       "id": "proj-002",
-      "title": "Summer Drop Ad Set",
-      "description": "Performance video ad set for a DTC apparel summer collection.",
-      "client": "Wavelength Apparel",
-      "industry": "Fashion",
+      "title": "Summer Drop Ad",
       "category": "Video Ads",
       "featured": true,
       "media": {
@@ -118,143 +41,30 @@
     },
     {
       "id": "proj-003",
-      "title": "Hero Product Shoot",
-      "description": "Studio-grade AI-enhanced product visuals for a hero SKU campaign.",
-      "client": "Northbound Coffee Co.",
-      "industry": "Food & Beverage",
-      "category": "Product Campaigns",
+      "title": "Hero Product Ad",
+      "category": "Video Ads",
       "featured": false,
       "media": {
-        "type": "image",
-        "src": "/uploads/images/northbound-hero.svg"
+        "type": "video",
+        "src": "/uploads/videos/hero-product-ad.mp4",
+        "thumbnail": "/uploads/images/northbound-hero.svg"
       }
     },
     {
       "id": "proj-004",
-      "title": "Reels Content Calendar",
-      "description": "A month of scroll-stopping social content built around one core message.",
-      "client": "Aurelle Beauty",
-      "industry": "Beauty & Skincare",
-      "category": "Social Content",
+      "title": "UGC Testimonial Style Ad",
+      "category": "AI UGC Videos",
       "featured": false,
       "media": {
-        "type": "image",
-        "src": "/uploads/images/aurelle-social.svg"
+        "type": "video",
+        "src": "/uploads/videos/ugc-testimonial-ad.mp4",
+        "thumbnail": "/uploads/images/aurelle-social.svg"
       }
     }
   ],
-  "brands": [
-    {
-      "id": "brand-001",
-      "name": "Luminate Skincare",
-      "logo": "/logos/luminate.svg"
-    },
-    {
-      "id": "brand-002",
-      "name": "Wavelength Apparel",
-      "logo": "/logos/wavelength.svg"
-    },
-    {
-      "id": "brand-003",
-      "name": "Northbound Coffee Co.",
-      "logo": "/logos/northbound.svg"
-    },
-    {
-      "id": "brand-004",
-      "name": "Aurelle Beauty",
-      "logo": "/logos/aurelle.svg"
-    },
-    {
-      "id": "brand-005",
-      "name": "Driftwood Supply",
-      "logo": "/logos/driftwood.svg"
-    },
-    {
-      "id": "brand-006",
-      "name": "Halcyon Wellness",
-      "logo": "/logos/halcyon.svg"
-    }
-  ],
-  "process": [
-    {
-      "step": "01",
-      "title": "Research & Strategy",
-      "description": "We study your audience, offer, and competitors to define a creative angle built to convert."
-    },
-    {
-      "step": "02",
-      "title": "Creative Production",
-      "description": "Our AI-powered pipeline produces polished video ads, UGC content, and visuals at speed."
-    },
-    {
-      "step": "03",
-      "title": "Launch & Optimization",
-      "description": "We ship creative to your ad accounts and iterate based on real performance data."
-    }
-  ],
-  "about": {
-    "headline": "Meet Nova Blake",
-    "description": "Nova Blake is the face of The Nova Conversion Engine, focused on helping ecommerce and DTC brands create high-converting AI-powered creative assets.",
-    "image": "/uploads/images/nova-blake.svg"
-  },
-  "testimonials": [
-    {
-      "id": "test-001",
-      "clientName": "Maya Chen",
-      "company": "Luminate Skincare",
-      "testimonial": "Nova's team turned our UGC content around in days, and our conversion rate jumped almost immediately.",
-      "photo": "/avatars/maya-chen.svg"
-    },
-    {
-      "id": "test-002",
-      "clientName": "Owen Reyes",
-      "company": "Wavelength Apparel",
-      "testimonial": "The video ads felt premium but still scroll-stopping. Our ROAS has never looked better.",
-      "photo": "/avatars/owen-reyes.svg"
-    },
-    {
-      "id": "test-003",
-      "clientName": "Priya Nair",
-      "company": "Aurelle Beauty",
-      "testimonial": "Working with The Nova Conversion Engine felt like adding an entire in-house creative team overnight.",
-      "photo": "/avatars/priya-nair.svg"
-    }
-  ],
+
   "contact": {
-    "headline": "Let's Build Your Next Winning Creative",
-    "subheadline": "Tell us about your brand and we'll get back to you within one business day.",
-    "email": "novablakeai.official@gmail.com"
-  },
-  "footer": {
-    "brandName": "The Nova Conversion Engine",
-    "tagline": "AI Video Ads \u00b7 AI UGC Content \u00b7 Creative Production",
-    "links": [
-      {
-        "label": "Services",
-        "href": "#services"
-      },
-      {
-        "label": "Portfolio",
-        "href": "#portfolio"
-      },
-      {
-        "label": "Contact",
-        "href": "#contact"
-      }
-    ],
-    "socials": [
-      {
-        "label": "Instagram",
-        "href": "https://instagram.com"
-      },
-      {
-        "label": "TikTok",
-        "href": "https://tiktok.com"
-      },
-      {
-        "label": "LinkedIn",
-        "href": "https://linkedin.com"
-      }
-    ]
+    "email": "novablakeai.official@gmail.com",
+    "calendlyUrl": "https://calendly.com/novablakeai/discovery-call"
   }
 }

@@ -1,27 +1,15 @@
-import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Services from "@/components/Services";
 import Portfolio from "@/components/Portfolio";
-import Brands from "@/components/Brands";
-import Process from "@/components/Process";
-import About from "@/components/About";
-import Testimonials from "@/components/Testimonials";
-import Contact from "@/components/Contact";
+import BookCall from "@/components/BookCall";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <>
-      <Header />
       <main>
         <Hero />
-        <Services />
         <Portfolio />
-        <Brands />
-        <Process />
-        <About />
-        <Testimonials />
-        <Contact />
+        <BookCall />
       </main>
       <Footer />
     </>

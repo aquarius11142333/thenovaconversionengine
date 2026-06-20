@@ -16,11 +16,11 @@ const body = Inter({
 });
 
 export const metadata: Metadata = {
-  title: `${site.brandName} — AI Video Ads & Creative Production`,
-  description: site.hero.subheadline,
+  title: `${site.brandName} — AI Video Ads & UGC Content`,
+  description: site.vsl.oneLiner,
   openGraph: {
     title: site.brandName,
-    description: site.hero.subheadline,
+    description: site.vsl.oneLiner,
   },
 };
 
