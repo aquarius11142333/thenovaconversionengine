@@ -1,3 +1,6 @@
+"use client";
+
+import Script from "next/script";
 import { site } from "@/lib/content";
 
 export default function BookCall() {
@@ -14,12 +17,16 @@ export default function BookCall() {
         </p>
       </div>
 
-      <div className="mt-8 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02]">
-        <iframe
-          src={contact.calendlyUrl}
-          title="Schedule a call"
-          className="h-[700px] w-full"
-          loading="lazy"
+      <div className="mt-8 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-1">
+        {/* Calendly inline widget */}
+        <div
+          className="calendly-inline-widget"
+          data-url={contact.calendlyUrl}
+          style={{ minWidth: "320px", height: "700px" }}
+        />
+        <Script
+          src="https://assets.calendly.com/assets/external/widget.js"
+          strategy="lazyOnload"
         />
       </div>
 
