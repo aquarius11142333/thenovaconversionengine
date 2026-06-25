@@ -19,13 +19,13 @@
   "portfolio": [
     {
       "id": "proj-001",
-      "title": "Glow Serum Launch",
+      "title": "L'oreal Paris",
       "category": "AI UGC Videos",
       "featured": true,
       "media": {
         "type": "video",
-        "src": "/uploads/videos/glow-serum-launch.mp4",
-        "thumbnail": "/uploads/images/glow-serum-thumb.svg"
+        "src": "/uploads/videos/Infallible 32H.mp4",
+        "thumbnail": "/uploads/images/Infallible 32H.jpeg"
       }
     },
     {
